@@ -370,6 +370,11 @@ NSString * const HarpyLanguageVietnamese            = @"vi";
             if ([self.delegate respondsToSelector:@selector(harpyDidDetectNewVersionWithoutAlert:)]) {
                 [self.delegate harpyDidDetectNewVersionWithoutAlert:_theNewVersionMessage];
             }
+            
+            if ([self.delegate respondsToSelector:@selector(harpyDidDetectNewVersionWithAppData:)]) {
+                [self.delegate harpyDidDetectNewVersionWithAppData:_appData];
+            }
+            
         } break;
     }
 }
